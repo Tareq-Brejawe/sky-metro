@@ -164,7 +164,7 @@ const Hero = () => {
         <div className="flex flex-col gap-y-2 px-6 xl:px-0">
           <h1
             role="heading"
-            className={`text-4xl md:text-5xl xl:text-6xl mx-auto w-full md:w-lg xl:w-xl  ${locale === "ar" ? "xl:text-right" : "font-black xl:text-left"} leading-10 md:leading-14 xl:leading-18 text-center text-white text-shadow-lg`}
+            className={`text-3xl md:text-5xl xl:text-6xl mx-auto w-full md:w-lg xl:w-xl  ${locale === "ar" ? "xl:text-right" : "font-black xl:text-left"} leading-9 md:leading-14 xl:leading-18 text-center text-white text-shadow-lg`}
           >
             {t("The best for a stable connection")}
           </h1>
