@@ -8,10 +8,10 @@ const page = () => {
   return (
     <>
       <Hero />
-      <Services />
+      {/* <Services />
       <Pricing />
       <Testimonial />
-      <FAQ />
+      <FAQ /> */}
     </>
   );
 };

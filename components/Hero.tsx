@@ -129,7 +129,6 @@ const Hero = () => {
           left-1/4
           top-1/3
           h-125
-          w-125
           rounded-full
           bg-white/5
           blur-[100px]
