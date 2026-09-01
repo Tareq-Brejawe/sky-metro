@@ -248,82 +248,77 @@ const Navbar = () => {
               >
                 <div className="flex flex-wrap gap-x-10 gap-y-4 w-full">
                   <div>
-                    <h1 className="font-black">Fiber internet</h1>
+                    <h1 className="font-black">{t("Fiber internet")}</h1>
                     <ul
                       role="list"
                       className="text-black/60 text-sm flex flex-col gap-2 mt-2"
                     >
-                      <h1 className="text-[#5687af]">Postpaid packages</h1>
+                      <h1 className="text-[#5687af]">
+                        {t("Postpaid packages")}
+                      </h1>
                       <ul className="flex flex-col gap-2">
                         <li className="cursor-pointer hover:underline underline-offset-6">
-                          Fiber postpaid{" "}
-                          <span className="text-black/85">100 Mbps</span>
+                          {t("postpaid 100")}{" "}
                         </li>
                         <li className="cursor-pointer hover:underline underline-offset-6">
-                          Fiber postpaid{" "}
-                          <span className="text-black/85">200 Mbps</span>
+                          {t("postpaid 200")}{" "}
                         </li>
                         <li className="cursor-pointer hover:underline underline-offset-6">
-                          Fiber postpaid{" "}
-                          <span className="text-black/85">300 Mbps</span>
+                          {t("postpaid 300")}{" "}
                         </li>
                       </ul>
-                      <h1 className="text-[#5687af] ">Prepaid packages</h1>
+                      <h1 className="text-[#5687af] ">
+                        {t("Prepaid packages")}
+                      </h1>
                       <li className="cursor-pointer hover:underline underline-offset-6">
-                        Fiber prepaid{" "}
-                        <span className="text-black/85">300 Mbps</span> (12
-                        Months)
+                        {t("Fiber prepaid")}{" "}
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h1 className="font-black ">Fixed wireless </h1>
+                    <h1 className="font-black ">{t("Fixed wireless")}</h1>
                     <ul
                       role="list"
                       className="text-black/60 text-[15px] flex flex-wrap gap-x-20 gap-y-2 mt-2"
                     >
                       <div className="text-sm">
-                        <h1 className="text-[#5687af]">Postpaid packages</h1>
+                        <h1 className="text-[#5687af]">
+                          {t("Postpaid packages")}
+                        </h1>
                         <ul className="mt-2 flex flex-col gap-2">
                           <li className="cursor-pointer hover:underline  underline-offset-6">
-                            Unlimited 5G{" "}
-                            <span className="text-black/85">100 Mbps</span>
+                            {t("100 Mbps")}{" "}
                           </li>
                           <li className="cursor-pointer hover:underline  underline-offset-6">
-                            Unlimited 5G{" "}
-                            <span className="text-black/85">200 Mbps</span>
+                            {t("200 Mbps")}{" "}
                           </li>
                         </ul>
                       </div>
                       <div className="text-sm">
-                        <h1 className="text-[#5687af]">Prepaid packages</h1>
+                        <h1 className="text-[#5687af]">
+                          {t("Prepaid packages")}
+                        </h1>
                         <div className="flex gap-10 mt-2">
                           <ul className="flex flex-col gap-2">
                             <li className="cursor-pointer hover:underline underline-offset-6">
-                              Unlimited 5G for{" "}
-                              <span className="text-black/85">3 Months</span>
+                              {t("3 Months")}
                             </li>
                             <li className="cursor-pointer hover:underline underline-offset-6">
-                              Unlimited 5G for{" "}
-                              <span className="text-black/85">6 Months</span>
+                              {t("6 Months")}
                             </li>
                             <li className="cursor-pointer hover:underline underline-offset-6">
-                              Unlimited 5G for{" "}
-                              <span className="text-black/85">12 Months</span>
+                              {t("12 Months")}
                             </li>
                           </ul>
                           <ul className="flex flex-col gap-2">
                             <li className="cursor-pointer hover:underline underline-offset-6">
-                              Unlimited 4G for{" "}
-                              <span className="text-black/85">3 Months</span>
+                              {t("4G for 3")}{" "}
                             </li>
                             <li className="cursor-pointer hover:underline underline-offset-6">
-                              Unlimited 4G for{" "}
-                              <span className="text-black/85">6 Months</span>
+                              {t("4G for 6")}
                             </li>
                             <li className="cursor-pointer hover:underline underline-offset-6">
-                              Unlimited 4G for{" "}
-                              <span className="text-black/85">12 Months</span>
+                              {t("4G for 12")}
                             </li>
                           </ul>
                         </div>
