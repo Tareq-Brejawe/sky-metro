@@ -13,10 +13,7 @@ const Services = () => {
   const t = useTranslations("Services");
 
   return (
-    <section
-      role="main"
-      className="flex relative flex-col gap-y-8 items-center 2xl:flex-row w-full justify-between text-black/85 py-10 md:py-30 px-6 xl:px-20"
-    >
+    <section className="flex relative flex-col gap-y-8 items-center 2xl:flex-row w-full justify-between text-black/85 py-10 md:py-30 px-6 xl:px-20">
       <Animatebackground />
       <div className="w-xs md:w-sm 2xl:w-6xl h-full">
         {locale === "ar" ? (

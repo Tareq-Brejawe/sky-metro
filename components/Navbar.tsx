@@ -1,5 +1,4 @@
 "use client";
-
 import { Img1, Logo1, Logo2 } from "@/images";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
@@ -44,10 +43,18 @@ const Navbar = () => {
 
   return (
     <div
-      role="menubar"
+      aria-label="navication bar"
+      data-id="navbar"
+      role="navigation"
       className={`flex items-center py-0.5 ${isScrolled ? "bg-white! text-[#5687af] shadow" : "bg-transparent text-white"} z-100 fixed w-full justify-between xl:px-20 px-6`}
     >
-      <Link role="logo" href="/" className="flex items-center py-2 2xl:py-0">
+      <Link
+        aria-label="link"
+        data-id="logo"
+        role="link"
+        href="/"
+        className="flex items-center py-2 2xl:py-0"
+      >
         {isScrolled ? (
           <Image
             id="Logo2"
@@ -91,7 +98,7 @@ const Navbar = () => {
           <Link
             id="link Home"
             aria-label="Home"
-            role="link"
+            role="listitem"
             href="/"
             className="cursor-pointer"
           >
@@ -100,7 +107,7 @@ const Navbar = () => {
           <Link
             id="link Services"
             aria-label="Services"
-            role="link"
+            role="listitem"
             href="#services"
             onMouseEnter={() => {
               setHover((prev) => !prev);
@@ -198,7 +205,7 @@ const Navbar = () => {
           <Link
             id="link pricing"
             aria-label="pricing"
-            role="link"
+            role="listitem"
             href="#pricing"
             className="cursor-pointer"
           >
@@ -207,7 +214,7 @@ const Navbar = () => {
           <Link
             id="link contact"
             aria-label="contact"
-            role="link"
+            role="listitem"
             href="/contact"
             className="cursor-pointer"
           >
@@ -218,6 +225,7 @@ const Navbar = () => {
       {/* menu for small screen */}
       {open && (
         <div
+          data-id="menu"
           role="menu"
           className="flex flex-col xl:hidden absolute top-18 z-100 bg-white justify-between h-[calc(100vh-4rem)] w-full left-0 text-black"
         >
@@ -225,7 +233,7 @@ const Navbar = () => {
             <Link
               id="link Home"
               aria-label="Home"
-              role="link"
+              role="listitem"
               href="/"
               onClick={() => {
                 setOpen((prev) => !prev);
@@ -331,7 +339,7 @@ const Navbar = () => {
             <Link
               id="link pricing"
               aria-label="pricing"
-              role="link"
+              role="listitem"
               onClick={() => {
                 setOpen((prev) => !prev);
               }}
@@ -343,7 +351,7 @@ const Navbar = () => {
             <Link
               id="link contact"
               aria-label="contact"
-              role="link"
+              role="listitem"
               onClick={() => {
                 setOpen((prev) => !prev);
               }}
@@ -407,6 +415,7 @@ const Navbar = () => {
         )}
         {locale === "ar" ? (
           <button
+            aria-label="تفعيل"
             role="button"
             className={`${isScrolled ? "text-white bg-[#5687af] border-[#5687af]" : "text-[#5687af] bg-white border-white"} hidden xl:block border  px-2 pt-2 pb-1 cursor-pointer`}
           >
@@ -414,6 +423,7 @@ const Navbar = () => {
           </button>
         ) : (
           <button
+            aria-label="Activate"
             role="button"
             className={`${isScrolled ? "text-white bg-[#5687af] border-[#5687af]" : "text-[#5687af] bg-white border-white"} font-bold hidden xl:block border  px-2 pt-2 pb-1 cursor-pointer`}
           >
@@ -423,8 +433,9 @@ const Navbar = () => {
 
         {open ? (
           <button
+            aria-label="close button"
+            data-id="close"
             id="close"
-            aria-label="icon"
             role="button"
             onClick={() => {
               setOpen((prev) => !prev);
@@ -435,6 +446,10 @@ const Navbar = () => {
           </button>
         ) : (
           <button
+            aria-label="menu button"
+            id="bar"
+            role="button"
+            data-id="bar"
             onClick={() => {
               setOpen((prev) => !prev);
             }}

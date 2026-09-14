@@ -10,10 +10,7 @@ export default function Testimonial() {
   const locale = useLocale();
 
   return (
-    <section
-      role="main"
-      className="flex flex-col overflow-hidden w-full py-10 md:py-30 items-center"
-    >
+    <section className="flex flex-col overflow-hidden w-full py-10 md:py-30 items-center">
       <div className="text-black/85 items-center bg-white flex flex-col py-10">
         <h1
           role="heading"

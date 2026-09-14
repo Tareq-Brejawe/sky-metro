@@ -38,13 +38,15 @@ export const Collapses = () => {
 
   return (
     <>
-      <div className="hidden lg:block">
+      <div role="tablist" className="hidden lg:block">
         <ConfigProvider direction={locale === "ar" ? "rtl" : "ltr"}>
           <Collapse size="large" accordion items={items} />
         </ConfigProvider>
       </div>
-      <div className="block lg:hidden">
-        <Collapse size="medium" accordion items={items} />
+      <div role="tablist" className="block lg:hidden">
+        <ConfigProvider direction={locale === "ar" ? "rtl" : "ltr"}>
+          <Collapse size="medium" accordion items={items} />
+        </ConfigProvider>
       </div>
     </>
   );

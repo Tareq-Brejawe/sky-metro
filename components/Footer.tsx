@@ -17,10 +17,7 @@ const Footer = () => {
   const t = useTranslations("Footer");
 
   return (
-    <section
-      role="footer"
-      className="flex flex-col items-center text-black/85 pt-10 md:pt-30 px-6 xl:px-20"
-    >
+    <footer className="flex flex-col items-center text-black/85 pt-10 md:pt-30 px-6 xl:px-20">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full lg:w-4xl gap-10">
         <div className="flex flex-col gap-y-2  ">
           <div className="flex items-center">
@@ -49,22 +46,33 @@ const Footer = () => {
             role="list"
             className="text-sm mt-2 flex flex-row flex-wrap md:flex-nowrap md:flex-col gap-2"
           >
-            <Link className="hover:underline underline-offset-6" href="/">
+            <Link
+              role="listitem"
+              aria-label="Home"
+              className="hover:underline underline-offset-6"
+              href="/"
+            >
               {t("home")}
             </Link>
             <Link
+              role="listitem"
+              aria-label="Services"
               className="hover:underline underline-offset-6"
-              href="/Services"
+              href="#Services"
             >
               {t("services")}
             </Link>
             <Link
+              role="listitem"
+              aria-label="Pricing"
               className="hover:underline underline-offset-6"
-              href="/Pricing"
+              href="#Pricing"
             >
               {t("pricing")}
             </Link>
             <Link
+              role="listitem"
+              aria-label="Contact"
               className="hover:underline underline-offset-6"
               href="/contact"
             >
@@ -101,7 +109,7 @@ const Footer = () => {
       </div>
       <hr className="w-full my-4 border-t border-black/10" />
       <p className="text-xs my-2">© 2026 SkyMetro. {t("All")}</p>
-    </section>
+    </footer>
   );
 };
 

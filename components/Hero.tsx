@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { FaChevronUp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
+
 const signalWaves = [
   { size: 180, delay: 0 },
   { size: 280, delay: 0.8 },
@@ -44,7 +45,7 @@ const Hero = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (scrollY > 800) {
+      if (window.scrollY > 800) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -58,7 +59,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section role="main" className="h-full relative">
+    <main role="main" className="h-full relative">
       <div className="absolute left-[18%] top-[43%] -translate-x-1/2 -translate-y-1/2">
         {signalWaves.map((wave, index) => (
           <motion.div
@@ -150,14 +151,21 @@ const Hero = () => {
         className="bg-[url(../images/background.jpg)] bg-cover bg-center w-full py-50 min-h-screen flex justify-center items-center"
       >
         {isScrolled && (
-          <button
-            onClick={() => {
-              scrollToTop();
-            }}
-            className={`fixed ${locale === "ar" ? "left-6 md:left-20" : "right-6 md:right-20"}  bottom-10 text-[#5687af] z-100 bg-white border-2 border-[#5687af] cursor-pointer rounded-full p-2`}
-          >
-            <FaChevronUp size={25} />
-          </button>
+          <label htmlFor="buttonUp">
+            <button
+              id="buttonUp"
+              aria-label="button Up"
+              role="button"
+              title="button"
+              name="buttonUp"
+              onClick={() => {
+                scrollToTop();
+              }}
+              className={`fixed ${locale === "ar" ? "left-6 md:left-20" : "right-6 md:right-20"}  bottom-10 text-[#5687af] z-100 bg-white border-2 border-[#5687af] cursor-pointer rounded-full p-2`}
+            >
+              <FaChevronUp size={25} />
+            </button>
+          </label>
         )}
 
         <div className="flex flex-col gap-y-2 px-6 xl:px-0">
@@ -224,7 +232,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

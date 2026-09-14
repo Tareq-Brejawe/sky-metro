@@ -5,10 +5,7 @@ import { useTranslations } from "next-intl";
 const FAQ = () => {
   const t = useTranslations("Questions");
   return (
-    <section
-      role="menuitem"
-      className="w-full flex flex-col py-10 md:py-30 px-6 xl:px-20"
-    >
+    <section className="w-full flex flex-col py-10 md:py-30 px-6 xl:px-20">
       <div className="text-black/85 items-center  flex flex-col py-10">
         <h1
           role="heading"

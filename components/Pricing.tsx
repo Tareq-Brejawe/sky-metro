@@ -17,11 +17,7 @@ const Pricing = () => {
   const background = useMotionTemplate`conic-gradient(from ${rotate}deg, #5687af, #ffffff,#ffffff)`;
 
   return (
-    <section
-      role="main"
-      id="pricing"
-      className="w-full flex py-10 md:py-30 px-6 xl:px-20"
-    >
+    <section id="pricing" className="w-full flex py-10 md:py-30 px-6 xl:px-20">
       <div className="relative shadow-lg/4 rounded-4xl md:rounded-full overflow-hidden p-0.5 mx-auto">
         <motion.div
           style={{ background }}
