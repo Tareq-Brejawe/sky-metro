@@ -12,7 +12,8 @@
 
 # testing
 /coverage
-
+/cypress
+*.config.ts
 # next.js
 /.next/
 /out/
